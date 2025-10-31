@@ -1,8 +1,8 @@
 /* these are the main colors and bg images
    replace them with anything you want! */
 :root {
-    --header-bg: url("images/header.png");
-    --site-bg: url("images/flowertile.png");
+    --header-bg: url("images/header.jpg");
+    --site-bg: url("images/battile.png");
     --accent-color: #9929ea;
     --select-color: #cc66da;
     --link-color: #faeb92;
@@ -24,14 +24,15 @@
 * {
     box-sizing: border-box;
     /* change the font here, it's set up to all use the same one */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 /* this is for when you select text on the page */
 ::selection {
     background: var(--select-color);
     color: var(--border-color);
 }
-
 body {
     background-color: var(--bg-color);
     background-image: var(--site-bg);
@@ -44,6 +45,7 @@ body {
 /* i think having better line spacing helps text to be more readable, but you can remove it if you want */
 p {
     line-height: 1.5em;
+    letter-spacing: 0.1em;
 }
 
 h1 {
@@ -83,10 +85,13 @@ header {
 
 /* this is your site title displayed at the top of the page */
 header > h1 {
+    font-family: "Jolly Lodger", system-ui;
+    font-weight: 400;
+    font-style: normal;
     background-color: var(--bg-color2);
     color: var(--border-color);
     margin: 1em auto;
-    font-size: 2em;
+    font-size: 4em;
     /*uncomment this line if you want the header text to not take up the full length of the div*/
     /*width: fit-content;*/
     max-width: 600px;
@@ -170,7 +175,7 @@ a:hover {
     margin: auto;
     border: 2px solid var(--bg-color);
     /*i gave this one small text cuz i think it looks cute, but you can remove this line to make it normal*/
-    font-size: 11px;
+    font-size: 15px;
     /*making sure the list items are spaced correctly cuz it's hard to read when they're squished together*/
     line-height: 1.5rem;
 }
@@ -179,6 +184,45 @@ a:hover {
     margin: 0.5em;
     /*this line will limit the image size if you decide not to use the flower shape below*/
     max-width: 320px;
+}
+.blob {
+    width: 320px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: shape(
+        from 65.36% 92.24%,
+        curve to 56.97% 95.95% with 61.31% 94.07%,
+        curve to 47.87% 98.1% with 52.63% 97.84%,
+        curve to 39.29% 94.87% with 43.12% 98.37%,
+        curve to 31.06% 90.42% with 35.47% 91.37%,
+        curve to 22.38% 87.54% with 26.66% 89.47%,
+        curve to 14.21% 82.7% with 18.11% 85.6%,
+        curve to 10.42% 74.38% with 10.3% 79.81%,
+        curve to 6.17% 65.66% with 10.55% 68.94%,
+        curve to 2.5% 57.48% with 1.8% 62.38%,
+        curve to 5.3% 48.26% with 3.2% 52.58%,
+        curve to 7.77% 39.62% with 7.4% 43.94%,
+        curve to 9.59% 31.13% with 8.13% 35.3%,
+        curve to 12.97% 22.76% with 11.05% 26.97%,
+        curve to 18.27% 15.4% with 14.88% 18.55%,
+        curve to 26.17% 11.02% with 21.66% 12.25%,
+        curve to 34.59% 7.49% with 30.69% 9.78%,
+        curve to 42.9% 3.15% with 38.5% 5.2%,
+        curve to 52.02% 1.93% with 47.31% 1.09%,
+        curve to 60.86% 5.03% with 56.72% 2.76%,
+        curve to 68.65% 9.79% with 64.99% 7.3%,
+        curve to 75.39% 15.24% with 72.31% 12.27%,
+        curve to 83.14% 19.91% with 78.47% 18.21%,
+        curve to 91.35% 25.03% with 87.81% 21.61%,
+        curve to 94.14% 33.65% with 94.88% 28.45%,
+        curve to 95.91% 43.09% with 93.41% 38.85%,
+        curve to 96.95% 51.91% with 98.4% 47.34%,
+        curve to 93.71% 60.6% with 95.51% 56.48%,
+        curve to 91.73% 69.64% with 91.92% 64.72%,
+        curve to 87.38% 77.16% with 91.53% 74.56%,
+        curve to 79.46% 81.99% with 83.22% 79.75%,
+        curve to 72.55% 87.32% with 75.7% 84.23%,
+        curve to 65.36% 92.24% with 69.41% 90.41%
+    );
 }
 /*flower shape generated from here: https://css-generators.com/flower-shapes/ */
 .flower {
