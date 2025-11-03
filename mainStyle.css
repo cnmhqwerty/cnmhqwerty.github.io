@@ -260,6 +260,7 @@ a:hover {
 
 main {
     padding: 1em;
+    min-width: 550px;
 }
 
 /*this is the top post on the blog. you can treat it like a pinned post if you want!*/
@@ -275,7 +276,10 @@ main {
     width: fit-content;
     height: fit-content;
 }
-
+#list{
+    display: flex;
+    height: 200px;
+}
 /*these are the regular blog post styles!*/
 article {
     background-color: var(--bg-color);
@@ -421,4 +425,7 @@ footer {
     #sidebar li {
         margin: 0.3em 1em;
     }
+
+    /* guestbook styling */
+
 }

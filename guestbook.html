@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Casper's Haunted Guestbook</title>
+        <meta name="author" content="Casper" />
+        <meta
+            name="description"
+            content="This haunted guestbook documents all who have floated though."
+        />
+        <link href="guestbookAssets/guestbookStyle.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="mainStyle.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Pangolin&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Casper's Haunted Guestbook</h1>
+        </header>
+
+        <div id="content">
+            <aside id="sidebar">
+                <div id="avatar">
+                    <img
+                        class="blob"
+                        src="images\Casper'sGhost.png"
+                        alt="it's me!"
+                    />
+                </div>
+
+                <div id="bio">
+                    <p>
+                        This haunted space belongs to us and remains a house we
+                        can always haunt when we need to.
+                    </p>
+                    <p>
+                        Please leave your mark on the guest book and don't
+                        forget to take a little rest while you're here.. the
+                        outer web is scary &lt;3
+                    </p>
+                    <p>This blog is completely SFW... mostly</p>
+                </div>
+
+                <div class="small-box">
+                    <ul>
+                        <li>22</li>
+                        <li>he/they</li>
+                        <li>taken 💙</li>
+                    </ul>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#link1">About</a></li>
+                        <li><a href="#link2">GitHub</a></li>
+                        <li><a href="guestbook.html">Guestbook</a></li>
+                        <li><a href="#link4">Link 4</a></li>
+                        <li><a href="#link5">Link 5</a></li>
+                    </ul>
+                </nav>
+                <div class="center small-text">
+                    <p>
+                        template by
+                        <a href="https://nomnomnami.com">NomnomNami</a>!
+                    </p>
+                    <p>last updated: 03/11/2025</p>
+                </div>
+            </aside>
+
+            <main>
+                <!--the "top" id gives it a special look. search "#top" in the css to edit them!-->
+                <article id="top" class="clearfix">
+                    <div class="img-right">
+                        <img src="images/periwinkle.png" alt="yours truly"/>
+                    </div>
+                    <section>
+                        <h1>~ Please sign my Guestbook ~</h1>
+                        <p>
+                            Anything you fill out here will be added to the guestbook below!
+                        </p>
+                        <div class="links">
+                            <a href="#AllEntries">View All Entries</a>
+                            <a href="#SignGuestBook">Sign the Guestbook</a>
+                            <a onClick="window.location.reload();">Refresh Guestbook</a>
+                        </div>
+                    </section>
+                <section>
+                    <div id="GuestBook">
+                        <h3 id="t">Recent Entries</h3>
+                        <!-- Homepage -->
+                        <div class="container">
+                            <div class="left-block">
+                                <div id="json" class="guestbook">
+
+                                </div>
+                        </div>
+
+                        <div id="SignGuestBook" class="overlay">
+                            <div id="SendForm" class="sign-guest-book-popup">
+                                <h1>Sign The Guestbook</h1>
+                                <a class="close" href="#">&times;</a>
+                                <div class="content">
+                                    <label style="display: block;
+    text-align: center;" class="aterisk_before" for="gform"> indicates a required field</label>
+                                    <form name="gform" id="gform" enctype="text/plain" action="GOOGLE_FORM_URL" target="hidden_iframe" onsubmit="submitted=true;">
+
+                                        <label for="GOOGLE_ENTRY_ID_Name"  class="aterisk_after"> Name </label>
+
+                                        <input class="form-element short" type="text" name="GOOGLE_ENTRY_ID_Name" id="GOOGLE_ENTRY_ID_Name" placeholder="Anon" style="background: #cc66da;" required>
+
+                                        <label for="GOOGLE_ENTRY_ID_TextArea"  class="max-length">Guestbook Entry</label>
+
+                                        <textarea class="form-element" name="GOOGLE_ENTRY_ID_TextArea" id="GOOGLE_ENTRY_ID_TextArea" rows="5" cols="30" oninvalid="this.setCustomValidity('You must sign the guestbook')"
+                                                  oninput="this.setCustomValidity('')"  maxlength="50" placeholder="Enter Your Message Here" required></textarea>
+
+                                        <label for="g-recaptcha"  class="aterisk_after">Captcha</label>
+                                        <div class="g-recaptcha"
+                                             data-sitekey="GOOGLE_Captcha_Key"></div>
+
+                                        <input class="form-button" type="submit" value="Submit">
+                                        <input class="form-button" type="reset" value="Reset Form">
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                        <div id="AllEntries" class="overlay">
+                            <div class="popup">
+                                <h2>All Entries</h2>
+                                <a class="close" href="#">&times;</a>
+                                <div id="AllEntries_Content" class="content" style="height: 25em;overflow-y: auto;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+    <script type="text/javascript">
+
+
+        // Put your Google Entry Form ID(s) Here
+        var GOOGLE_ENTRY_ID_Name="entry.1965994493";   // Name Entry ID
+        
+        var GOOGLE_ENTRY_ID_Guestbook="entry.1224872116"; // Guestbook Entry ID				
+
+        // Put your Google Form Link Here  (Make sure to use correct link as documented)
+
+
+
+        var Google_Form_Link="https://docs.google.com/forms/d/e/1FAIpQLSdup0c0MRmNcA6wbweDT3ZUY-iKw_zS1UAK9wSBK6KzClG9dA/formResponse?"
+
+
+        var Google_Form_ID="1FAIpQLSdup0c0MRmNcA6wbweDT3ZUY-iKw_zS1UAK9wSBK6KzClG9dA"
+
+        var Google_Form_Name="Form+Responses+1"
+
+
+        // Google Recaptcha Key 
+
+        var CaptchaKey = "6Lch2wAsAAAAADKiPSnKNUi4NLrna39HHsNdvwb-" // put your Google Captcha Key here
+    </script>
+    <script src="guestbookAssets/replace-vars.js">
+    </script>
+
+    <script src="guestbookAssets/guest-book-WIP.js"></script>
+    
+    
+                </section>
+                </article>
+            </main>
+        </div>
+
+        <footer>© 2025 Casper Helliwell</footer>
+    </body>
+</html>
