@@ -109,7 +109,7 @@ li {
     /*you can change the normal dot to anything you want :)*/
     /*list-style-type: "💙 ";*/
     /*i used a flower since i already drew it for another page haha*/
-    list-style-image: url("images/flower.png");
+    list-style-image: url("images/Heart.png");
 }
 
 nav {
@@ -160,7 +160,10 @@ a:hover {
     border-color: var(--accent-color);
     transition: 0.2s ease;
 }
-
+#list {
+    column-fill: auto;
+    column-width: 80%;
+}
 #sidebar {
     background-color: var(--bg-color2);
     color: var(--border-color);
