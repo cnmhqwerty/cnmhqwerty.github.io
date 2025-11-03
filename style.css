@@ -104,12 +104,12 @@ header > h1 {
     text-align: center;
 }
 
-/*this is for lists*/
 li {
-    /*you can change the normal dot to anything you want :)*/
-    /*list-style-type: "💙 ";*/
-    /*i used a flower since i already drew it for another page haha*/
     list-style-image: url("images/Heart.png");
+}
+
+ul {
+    columns: 2 auto;
 }
 
 nav {
@@ -128,8 +128,8 @@ nav > ul {
     justify-content: space-evenly;
 }
 nav li {
-    text-align: center;
     list-style-image: none;
+    justify-self: center;
 }
 nav li > a {
     font-weight: bold;
@@ -160,12 +160,8 @@ a:hover {
     border-color: var(--accent-color);
     transition: 0.2s ease;
 }
-#list {
-    column-fill: auto;
-    column-width: 80%;
-}
 #sidebar {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color);
     color: var(--border-color);
     height: fit-content;
     min-width: 320px;
@@ -176,7 +172,7 @@ a:hover {
 .small-box {
     max-width: 240px;
     margin: auto;
-    border: 2px solid var(--bg-color);
+    border: 2px solid var(--bg-color2);
     /*i gave this one small text cuz i think it looks cute, but you can remove this line to make it normal*/
     font-size: 15px;
     /*making sure the list items are spaced correctly cuz it's hard to read when they're squished together*/
@@ -184,10 +180,11 @@ a:hover {
 }
 
 #avatar {
-    margin: 0.5em;
+    margin: 1em auto auto;
     /*this line will limit the image size if you decide not to use the flower shape below*/
     max-width: 320px;
 }
+
 .blob {
     width: 320px; /* adjust to control the size */
     aspect-ratio: 1;
@@ -245,8 +242,8 @@ a:hover {
 #bio {
     margin: 20px;
     padding: 0.2em;
-    background: var(--bg-color);
-    border: 4px double var(--bg-color2);
+    background: var(--bg-color2);
+    border: 4px double var(--border-color);
     border-radius: 2em;
     /*made the text slightly smaller again here since periwinkle's bio was a little lengthy*/
     font-size: small;
@@ -276,11 +273,12 @@ main {
     margin-bottom: 10px;
     padding: 0.2em 1em;
     width: fit-content;
+    height: fit-content;
 }
 
 /*these are the regular blog post styles!*/
 article {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color);
     padding: 1em;
     border: 2px solid var(--border-color);
     border-radius: 0.3em;
