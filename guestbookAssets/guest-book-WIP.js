@@ -30,22 +30,15 @@ function fetchGuestBook_Entries() {
 
                 let SantizeResponses = encodeHTML(sortedInput[i].Guestbook_Entry)
 
-                // Dis-allow unicode comments for spam 
-                SantizeName = SantizeName.replace(/[^\x00-\x7F]/g, "")
-
-                SantizeResponses = SantizeResponses.replace(/[^\x00-\x7F]/g, "")
-
                 // Add Entries To Main Section
                 document.getElementById("json").innerHTML += `
-					 <div class="entry">
-                <div class="entry-info">
-                    <p><span class="author"> ${SantizeName}.</span> | <span class="date">${splitTime}</span> | <span class="time">${ConvertedTime}</span></p>
-                </div>
-                <div class="entry-text">
-                    <p>${SantizeResponses} </p>
-                </div>
-            </div>`
-
+            <article>
+                    <div class="post-header">
+                        ${SantizeName}
+                        <span class="timestamp">${splitTime}, ${ConvertedTime}</span>
+                    </div>
+                    ${SantizeResponses}
+                </article>`
             }
 
 
@@ -58,29 +51,22 @@ function fetchGuestBook_Entries() {
 
                 let SantizeName = encodeHTML(row.Name)
 
-                // Dis-allow unicode comments for spam 
-                SantizeName = SantizeName.replace(/[^\x00-\x7F]/g, "")
-
-                SantizeResponses = SantizeResponses.replace(/[^\x00-\x7F]/g, "")
-
                 // Split timestamp data
                 var splitTime = row.Timestamp.split(' ')[0];
                 var splitTime_1 = row.Timestamp.split(' ').pop();
-
 
                 // Work in Progress - Convert to 24 Hour
                 let ConvertedTime = tConvert(splitTime_1)
 
 
                 document.getElementById("AllEntries_Content").innerHTML += `
-					 <div class="entry">
-                <div class="entry-info">
-                    <p><span class="author">${SantizeName}</span> | <span class="date">${splitTime}</span> | <span class="time">${ConvertedTime}</span></p>
-                </div>
-                <div class="entry-text">
-                    <p>${SantizeResponses}</p>
-                </div>
-            </div>`
+            <article>
+                    <div class="post-header">
+                        ${SantizeName}
+                        <span class="timestamp">${splitTime}, ${ConvertedTime}</span>
+                    </div>
+                    ${SantizeResponses}
+                </article>`
 
             });
         });
@@ -93,7 +79,6 @@ function fetchGuestBook_Entries() {
 var Gform = document.getElementById("gform")
 Gform.addEventListener('submit', (e) => {
     validateRecaptcha();
-    
 })
 
 // Validate Recaptcha
@@ -106,12 +91,10 @@ function validateRecaptcha() {
     } else {
         // if Captcha Passed - Validate Text For Swearing Etc.
         document.gform.submit();
-        
+
     }
     // Timeout is needed for form to properly submit with animation
 
-    var subscribeForm = document.getElementById("SendForm")
-    
     setTimeout(function () {
 
 

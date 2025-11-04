@@ -67,8 +67,6 @@
                         <li><a href="#link1">About</a></li>
                         <li><a href="#link2">GitHub</a></li>
                         <li><a href="guestbook.html">Guestbook</a></li>
-                        <li><a href="#link4">Link 4</a></li>
-                        <li><a href="#link5">Link 5</a></li>
                     </ul>
                 </nav>
                 <div class="center small-text">
@@ -76,7 +74,7 @@
                         template by
                         <a href="https://nomnomnami.com">NomnomNami</a>!
                     </p>
-                    <p>last updated: 03/11/2025</p>
+                    <p>last updated: 04/11/2025</p>
                 </div>
             </aside>
 
@@ -97,16 +95,10 @@
                             <a onClick="window.location.reload();">Refresh Guestbook</a>
                         </div>
                     </section>
+                </article>
                 <section>
                     <div id="GuestBook">
-                        <h3 id="t">Recent Entries</h3>
-                        <!-- Homepage -->
                         <div class="container">
-                            <div class="left-block">
-                                <div id="json" class="guestbook">
-
-                                </div>
-                        </div>
 
                         <div id="SignGuestBook" class="overlay">
                             <div id="SendForm" class="sign-guest-book-popup">
@@ -114,7 +106,7 @@
                                 <a class="close" href="#">&times;</a>
                                 <div class="content">
                                     <label style="display: block;
-    text-align: center;" class="aterisk_before" for="gform"> indicates a required field</label>
+                                        text-align: center;" class="aterisk_before" for="gform"> indicates a required field</label>
                                     <form name="gform" id="gform" enctype="text/plain" action="GOOGLE_FORM_URL" target="hidden_iframe" onsubmit="submitted=true;">
 
                                         <label for="GOOGLE_ENTRY_ID_Name"  class="aterisk_after"> Name </label>
@@ -146,11 +138,9 @@
                                 <h2>All Entries</h2>
                                 <a class="close" href="#">&times;</a>
                                 <div id="AllEntries_Content" class="content" style="height: 25em;overflow-y: auto;">
-
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
     <script type="text/javascript">
 
@@ -176,10 +166,12 @@
     </script>
 
     <script src="guestbookAssets/guest-book-WIP.js"></script>
-    
-    
+
+
+                    <div id="json" class="guestbook">
+                    </div>
+                    </div>
                 </section>
-                </article>
             </main>
         </div>
 

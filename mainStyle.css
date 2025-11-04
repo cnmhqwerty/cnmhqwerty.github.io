@@ -117,6 +117,7 @@ nav {
 }
 
 nav > ul {
+    columns: 1 auto;
     max-width: 960px;
     margin: auto;
     line-height: 3rem;
