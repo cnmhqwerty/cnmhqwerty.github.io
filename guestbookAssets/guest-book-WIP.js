@@ -11,7 +11,8 @@ function fetchGuestBook_Entries() {
 
             // reversing JSON data to make things easier
             let sortedInput = (data.reverse())
-            
+
+
             // Add 5 entries to main page
             // ie; iterate 5 times
             for (var i = 0; i < 5 && i < sortedInput.length; i++) {
@@ -29,14 +30,22 @@ function fetchGuestBook_Entries() {
 
                 let SantizeResponses = encodeHTML(sortedInput[i].Guestbook_Entry)
 
+                // Dis-allow unicode comments for spam 
+                SantizeName = SantizeName.replace(/[^\x00-\x7F]/g, "")
+
+                SantizeResponses = SantizeResponses.replace(/[^\x00-\x7F]/g, "")
+
                 // Add Entries To Main Section
-                document.getElementById("json").innerHTML += `<article>
-                    <div class="post-header">
-                       ${SantizeName}.
-                        <span class="timestamp">${ConvertedTime}, ${splitTime}</span>
-                    </div>
-                        ${SantizeResponses}
-                </article>`
+                document.getElementById("json").innerHTML += `
+					 <div class="entry">
+                <div class="entry-info">
+                    <p><span class="author"> ${SantizeName}.</span> | <span class="date">${splitTime}</span> | <span class="time">${ConvertedTime}</span></p>
+                </div>
+                <div class="entry-text">
+                    <p>${SantizeResponses} </p>
+                </div>
+            </div>`
+
             }
 
 

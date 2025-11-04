@@ -117,7 +117,6 @@ nav {
 }
 
 nav > ul {
-    columns: 1 auto;
     max-width: 960px;
     margin: auto;
     line-height: 3rem;
@@ -128,24 +127,21 @@ nav > ul {
     /* and this spaces out the buttons so they're not touching */
     justify-content: space-evenly;
 }
-
 nav li {
     list-style-image: none;
     justify-self: center;
 }
-
 nav li > a {
     font-weight: bold;
     background-color: var(--bg-color);
     border: 4px double var(--outline-color);
     padding: 0.5em 3em;
+    /* this takes away the link underline */
     text-decoration: none;
 }
-
 nav li > a:visited {
     color: var(--link-color);
 }
-
 nav li > a:hover {
     color: var(--accent-color);
     background-color: var(--select-color);
@@ -156,17 +152,14 @@ a {
     border-radius: 0.3em;
     transition: 0.2s ease-out;
 }
-
 a:visited {
     color: var(--text-color);
 }
-
 a:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
     transition: 0.2s ease;
 }
-
 #sidebar {
     background-color: var(--bg-color);
     color: var(--border-color);
@@ -176,7 +169,6 @@ a:hover {
     margin-right: 2em;
     border-radius: 0.5em;
 }
-
 .small-box {
     max-width: 240px;
     margin: auto;
