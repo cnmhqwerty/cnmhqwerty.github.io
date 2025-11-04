@@ -17,7 +17,13 @@
             href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Pangolin&display=swap"
             rel="stylesheet"
         />
-        <script src="https://www.google.com/recaptcha/enterprise.js"></script>
+        <script type="text/javascript">
+        var onloadCallback = function() {
+            grecaptcha.render('html_element', {
+                'sitekey' : '6Lch2wAsAAAAADKiPSnKNUi4NLrna39HHsNdvwb-'
+            });
+        };
+    </script>
     </head>
     <body>
         <header>
@@ -120,9 +126,11 @@
                                         <textarea class="form-element" name="GOOGLE_ENTRY_ID_TextArea" id="GOOGLE_ENTRY_ID_TextArea" rows="5" cols="30" oninvalid="this.setCustomValidity('You must sign the guestbook')"
                                                   oninput="this.setCustomValidity('')"  maxlength="50" placeholder="Enter Your Message Here" required></textarea>
 
-                                        <label for="g-recaptcha"  class="aterisk_after">Captcha</label>
-                                        <div class="g-recaptcha"
-                                             data-sitekey="6Lch2wAsAAAAADKiPSnKNUi4NLrna39HHsNdvwb-"></div>
+                                        <label for="html_element"  class="aterisk_after">Captcha</label>
+                                        <div id="html_element"></div>
+                                    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                                            async defer>
+                                    </script>
 
                                         <input class="form-button" type="submit" value="Submit">
                                         <input class="form-button" type="reset" value="Reset Form">
@@ -153,17 +161,13 @@
         var GOOGLE_ENTRY_ID_Guestbook="entry.1224872116"; // Guestbook Entry ID				
 
         // Put your Google Form Link Here  (Make sure to use correct link as documented)
-
-
-
+        
         var Google_Form_Link="https://docs.google.com/forms/d/e/1FAIpQLSdup0c0MRmNcA6wbweDT3ZUY-iKw_zS1UAK9wSBK6KzClG9dA/formResponse?"
+        
+        var Google_Form_ID="16dONAJWIZConHYYXEM1ImUIr9TWFLm2dvNLnsw0rmv8"
 
-
-        var Google_Form_ID="1FAIpQLSdup0c0MRmNcA6wbweDT3ZUY-iKw_zS1UAK9wSBK6KzClG9dA"
-
-        var Google_Form_Name="Form+Responses+1"
-
-
+        var Google_Form_Name="1"
+        
         // Google Recaptcha Key 
 
         var CaptchaKey = "6Lch2wAsAAAAADKiPSnKNUi4NLrna39HHsNdvwb-" // put your Google Captcha Key here
