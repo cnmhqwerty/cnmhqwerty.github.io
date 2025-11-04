@@ -12,36 +12,6 @@ function fetchGuestBook_Entries() {
             // reversing JSON data to make things easier
             let sortedInput = (data.reverse())
 
-
-            // Add 5 entries to main page
-            // ie; iterate 5 times
-            for (var i = 0; i < 5 && i < sortedInput.length; i++) {
-
-                // Split timestamp data
-                var splitTime = sortedInput[i].Timestamp.split(' ')[0];
-                var splitTime_1 = sortedInput[i].Timestamp.split(' ').pop();
-
-
-                // Work in Progress - Convert to 24 Hour
-                let ConvertedTime = tConvert(splitTime_1)
-
-                // Sanitize Data
-                let SantizeName = encodeHTML(sortedInput[i].Name)
-
-                let SantizeResponses = encodeHTML(sortedInput[i].Guestbook_Entry)
-
-                // Add Entries To Main Section
-                document.getElementById("json").innerHTML += `
-            <article>
-                    <div class="post-header">
-                        ${SantizeName}
-                        <span class="timestamp">${splitTime}, ${ConvertedTime}</span>
-                    </div>
-                    ${SantizeResponses}
-                </article>`
-            }
-
-
             /// Adding all entries to all entry section
 
             data.forEach((row) => {
@@ -57,9 +27,8 @@ function fetchGuestBook_Entries() {
 
                 // Work in Progress - Convert to 24 Hour
                 let ConvertedTime = tConvert(splitTime_1)
-
-
-                document.getElementById("AllEntries_Content").innerHTML += `
+                
+                document.getElementById("json").innerHTML += `
             <article>
                     <div class="post-header">
                         ${SantizeName}
