@@ -277,10 +277,6 @@ main {
     width: fit-content;
     height: fit-content;
 }
-#list{
-    display: flex;
-    height: 200px;
-}
 /*these are the regular blog post styles!*/
 article {
     background-color: var(--bg-color);
@@ -363,7 +359,10 @@ details > summary {
 .img-right {
     float: right;
 }
-
+#character{
+    width: 250px;
+    height: 410px;
+}
 /*this stops the float image from overflowing out of its container*/
 .clearfix::after {
     content: "";
