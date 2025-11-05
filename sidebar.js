@@ -19,7 +19,7 @@ class Sidebar extends HTMLElement {
             </div>
 
             <div>
-                <iframe id="MediaPlayer" src="./webdeck-player/index.html" scrolling="no"></iframe>
+                <iframe id="MediaPlayer" src="./webdeck-player/index.html"></iframe>
             </div>
 
             <div id="small-box">

@@ -117,27 +117,31 @@ nav {
 }
 
 nav > ul {
-    columns: 1 auto;
+    columns: 2 auto;
     max-width: 960px;
     margin: auto;
     line-height: 3rem;
     /* this line takes away the dot in front of the list items */
     list-style-type: none;
     /* list items have default padding but we don't need it for these */
-    padding-left: 0;
+    padding-left: 2.5em;
     /* and this spaces out the buttons so they're not touching */
     justify-content: space-evenly;
-    display: grid;
+    /*display: grid;*/
 }
 nav li {
     list-style-image: none;
     justify-self: center;
 }
 nav li > a {
+    display: inline-block;
     font-weight: bold;
     background-color: var(--bg-color);
     border: 4px double var(--outline-color);
-    padding: 0.5em 3em;
+    width: 100px;
+    height: 50px;
+    margin: 0.5em auto;
+    text-align: center;
     /* this takes away the link underline */
     text-decoration: none;
 }
@@ -376,6 +380,7 @@ details > summary {
 #character{
     width: 250px;
     height: 410px;
+    margin-bottom: -3em;
 }
 /*this stops the float image from overflowing out of its container*/
 .clearfix::after {
