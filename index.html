@@ -16,6 +16,7 @@
             href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Pangolin&display=swap"
             rel="stylesheet"
         />
+        <script src="sidebar.js" type="text/javascript" defer></script>
     </head>
     <body>
         <header>
@@ -24,48 +25,8 @@
 
         <div id="content">
             <aside id="sidebar">
-                <div id="bio">
-                    <p>
-                        This haunted space belongs to us and remains a house we
-                        can always haunt when we need to.
-                    </p>
-                    <p>
-                        Please leave your mark on the guest book and don't
-                        forget to take a little rest while you're here.. the
-                        outer web is scary &lt;3
-                    </p>
-                    <p>This blog is completely SFW... mostly</p>
-                </div>
-                
-                <div>
-                <iframe id="MediaPlayer" src="./webdeck-player/index.html" scrolling="no"></iframe>
-                </div>
-                
-                <div class="small-box">
-                    <ul>
-                        <li>22</li>
-                        <li>he/they</li>
-                        <li>taken 💙</li>
-                    </ul>
-                </div>
-
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#link1">About</a></li>
-                        <li><a href="#link2">GitHub</a></li>
-                        <li><a href="guestbook.html">Guestbook</a></li>
-                    </ul>
-                </nav>
-                <div class="center small-text">
-                    <p>
-                        template by
-                        <a href="https://nomnomnami.com">NomnomNami</a>!
-                    </p>
-                    <p>last updated: 03/11/2025</p>
-                </div>
+            <sidebar-component></sidebar-component>
             </aside>
-
             <main>
                 <!--the "top" id gives it a special look. search "#top" in the css to edit them!-->
                 <article id="top" class="clearfix">
@@ -73,21 +34,23 @@
                         <img src="images/Caz_The_Friendly_Enby_Ghost_enbyedition.png" alt="yours truly"/>
                     </div>
                     <section>
-                        <h1>~ Welcome to my Webspace ~</h1>
+                        <h1> Welcome to my Webspace </h1>
+                        <br>
                         <p>
                             This page is a WIP and will go through rapid changes
                             while I'm still figuring out what I want to post on
                             here.
                         </p>
+                        <br>
                     </section>
                     <section id="list">
                         <h4>Hobbies:</h4>
                         <ul>
                             <li>Crochet</li>
                             <li>Knitting</li>
-                            <li>Cosplay/prop making</li>
-                            <li>Game development</li>
                             <li>Cooking</li>
+                            <li>Game development</li>
+                            <li>Cosplay/prop making</li>
                         </ul>
                     </section>
                 </article>

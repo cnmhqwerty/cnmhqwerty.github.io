@@ -127,6 +127,7 @@ nav > ul {
     padding-left: 0;
     /* and this spaces out the buttons so they're not touching */
     justify-content: space-evenly;
+    display: grid;
 }
 nav li {
     list-style-image: none;
@@ -165,23 +166,25 @@ a:hover {
     background-color: var(--bg-color);
     color: var(--border-color);
     height: fit-content;
-    min-width: 320px;
+    width: 340px;
     margin-top: 1em;
     margin-right: 2em;
     border-radius: 0.5em;
 }
 #MediaPlayer{
+    text-align: center;
     overflow: hidden; /* Hide scrollbars */
     width: 600px;
     height: 250px;
     padding: 0;
     transform: scale(0.55);
     transform-origin: 0 0;
-    margin-left: 1em;
+    margin-left: 0.35em;
     margin-bottom: -6em;
     margin-top: 1em;
 }
-.small-box {
+
+#small-box {
     max-width: 240px;
     margin: auto;
     border: 2px solid var(--bg-color2);
@@ -381,7 +384,8 @@ details > summary {
     display: table;
 }
 /*you can use the <small> tag in html, or make a class like this. up to you!*/
-.small-text {
+#footnote {
+    text-align: center;
     font-size: 11px;
     /*i gave it a shadow cuz i think it looks nice... yayyy*/
     text-shadow: var(--bg-color) 1px 1px;
