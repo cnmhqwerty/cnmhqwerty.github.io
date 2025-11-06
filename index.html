@@ -6,7 +6,7 @@
         <script type="text/javascript">
             // <![CDATA[
             var colour = "#faeb92"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
-            var sparkles = 50;
+            var sparkles = 20;
 
             /****************************
              *  Tinkerbell Magic Sparkle *
@@ -34,14 +34,14 @@
                     for (var i = 0; i < sparkles; i++) {
                         var rats = createDiv(3, 3);
                         rats.style.visibility = "hidden";
-                        rats.style.zIndex = "999";
+                        rats.style.zIndex = "1001";
                         document.body.appendChild((tiny[i] = rats));
                         starv[i] = 0;
                         tinyv[i] = 0;
                         var rats = createDiv(5, 5);
                         rats.style.backgroundColor = "transparent";
                         rats.style.visibility = "hidden";
-                        rats.style.zIndex = "999";
+                        rats.style.zIndex = "1001";
                         var rlef = createDiv(1, 5);
                         var rdow = createDiv(5, 1);
                         rats.appendChild(rlef);
@@ -226,7 +226,7 @@
             // ]]>
         </script>
 
-        <!-- end of sparkle -->
+        <!-- End of sparkle -->
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
