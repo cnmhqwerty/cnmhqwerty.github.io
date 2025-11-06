@@ -115,7 +115,6 @@ function onYouTubeIframeAPIReady() {
     width: "100%",
     playerVars: {
       controls: 0,
-      autoplay: 0,
       playsinline: 1,
       loop: 1,
     },
