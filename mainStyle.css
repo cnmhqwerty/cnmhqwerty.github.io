@@ -34,6 +34,7 @@
     color: var(--border-color);
 }
 body {
+    cursor: url("/images/ghostCursor.ani"), auto;
     background-color: var(--bg-color);
     background-image: var(--site-bg);
     margin: 0;
