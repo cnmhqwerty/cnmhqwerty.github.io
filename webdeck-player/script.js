@@ -109,23 +109,6 @@ nextButton.innerHTML =
 infoButton.innerHTML =
   "<img src='./themes/" + myThemes[currentTheme] + "/images/info.png' alt=''>";
 
-var playlistSelector = document.getElementById("playlistSelector");
-for (var key in myPlaylists) {
-  var option = document.createElement("option");
-  option.value = key;
-  option.innerHTML = key;
-  playlistSelector.appendChild(option);
-}
-
-var themeSelector = document.getElementById("themeSelector");
-for (var key in myThemes) {
-  var option = document.createElement("option");
-  option.value = key;
-  option.innerHTML = key;
-  themeSelector.appendChild(option);
-}
-themeSelector.value = currentTheme;
-
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("youtube-player", {
     height: "100%",
@@ -312,47 +295,6 @@ infoButton.addEventListener("click", function () {
   alert(
     "Webdeck Player - created by Chris\ngithub.com/cristiancfm/webdeck-player\n(c) MIT License",
   );
-});
-
-playlistSelector.addEventListener("change", function () {
-  currentPlaylist = playlistSelector.value;
-  player.stopVideo();
-  player.loadPlaylist({ list: myPlaylists[currentPlaylist] });
-});
-
-themeSelector.addEventListener("change", function () {
-  currentTheme = themeSelector.value;
-  document
-    .getElementById("player-theme")
-    .setAttribute(
-      "href",
-      "./themes/" + myThemes[currentTheme] + "/webdeck-player.css",
-    );
-
-  volumeButton.innerHTML =
-    "<img src='./themes/" +
-    myThemes[currentTheme] +
-    "/images/sound.png' alt=''>";
-  prevButton.innerHTML =
-    "<img src='./themes/" +
-    myThemes[currentTheme] +
-    "/images/prev.png' alt=''>";
-  playButton.innerHTML =
-    "<img src='./themes/" +
-    myThemes[currentTheme] +
-    "/images/play.png' alt=''>";
-  stopButton.innerHTML =
-    "<img src='./themes/" +
-    myThemes[currentTheme] +
-    "/images/stop.png' alt=''>";
-  nextButton.innerHTML =
-    "<img src='./themes/" +
-    myThemes[currentTheme] +
-    "/images/next.png' alt=''>";
-  infoButton.innerHTML =
-    "<img src='./themes/" +
-    myThemes[currentTheme] +
-    "/images/info.png' alt=''>";
 });
 
 function onPlayerReady(event) {
