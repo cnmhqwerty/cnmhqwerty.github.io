@@ -1,11 +1,10 @@
 class Sidebar extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-        this.innerHTML =
-        `<div id="bio">
+  connectedCallback() {
+    this.innerHTML = `<div id="bio">
                 <p>
                     This haunted space belongs to us and remains a house we
                     can always haunt when we need to.
@@ -19,14 +18,17 @@ class Sidebar extends HTMLElement {
             </div>
 
             <div>
-                <iframe id="MediaPlayer" src="./webdeck-player/index.html"></iframe>
+                <iframe
+                    id="MediaPlayer"
+                    src="webdeck-player/index.html"
+                ></iframe>
             </div>
 
             <div id="small-box">
                 <ul>
                     <li>22</li>
                     <li>he/they</li>
-                    <li>taken 💙</li>
+                    <li>taken</li>
                 </ul>
             </div>
 
@@ -45,7 +47,7 @@ class Sidebar extends HTMLElement {
                 </p>
                 <p>last updated: 03/11/2025</p>
             </div>`;
-    }
+  }
 }
 
-customElements.define('sidebar-component', Sidebar);
+customElements.define("sidebar-component", Sidebar);
