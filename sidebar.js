@@ -6,15 +6,15 @@ class Sidebar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<div id="bio">
                 <p>
-                    This haunted space belongs to us and remains a house we
-                    can always haunt when we need to.
+                    This website is haunted by the silly little guys in my head that wanna share my silly little things on the web.
+                    <br>Tune into my music tastes on a <em>rainy</em> day and look around, you can find a lot about me here.
                 </p>
                 <p>
                     Please leave your mark on the guest book and don't
                     forget to take a little rest while you're here.. the
                     outer web is scary &lt;3
                 </p>
-                <p>This blog is completely SFW... mostly</p>
+                <p>This blog is completely SFW!!! 👀</p>
             </div>
 
             <div>
@@ -29,6 +29,7 @@ class Sidebar extends HTMLElement {
                     <li>22</li>
                     <li>he/they</li>
                     <li>taken</li>
+                    <li>queer</li>
                 </ul>
             </div>
 
@@ -45,7 +46,7 @@ class Sidebar extends HTMLElement {
                     template by
                     <a href="https://nomnomnami.com">NomnomNami</a>!
                 </p>
-                <p>last updated: 03/11/2025</p>
+                <p>last updated: 09/11/2025</p>
             </div>`;
   }
 }
