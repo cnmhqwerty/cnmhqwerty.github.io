@@ -46,7 +46,7 @@ class Sidebar extends HTMLElement {
                     template by
                     <a href="https://nomnomnami.com">NomnomNami</a>!
                 </p>
-                <p>last updated: 09/11/2025</p>
+                <p>last updated: 17/11/2025</p>
             </div>`;
   }
 }
